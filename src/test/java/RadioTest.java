@@ -4,6 +4,8 @@ import ru.netology.Radio;
 
 public class RadioTest {
 
+
+
     @Test
     public void radioStationNumberNormal() {
         Radio radio = new Radio();
@@ -440,5 +442,16 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
+
+    @Test
+    public void radioStation() {
+        Radio radio = new Radio(20);
+
+        radio.setCurrentRadioStation(15);
+
+        int expected = 15;
+        int actual = radio.getCurrentRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
 }
 
